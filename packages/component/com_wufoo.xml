@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade" overwrite="true">
+    <name>Wufoo</name>
+    <identifier>com:wufoo</identifier>
+    <author>Dave Li</author>
+    <creationDate>Februari 2014</creationDate>
+    <copyright>Copyright (C) 2014 Moyo Web Architects and Contributors. (http://www.moyoweb.nl)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>dave@moyoweb.nl</authorEmail>
+    <authorUrl>www.moyoweb.nl</authorUrl>
+    <version>1.0.0</version>
+    <description>Wufoo</description>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">install/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">install/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="components/com_wufoo">
+        <file>aliases.php</file>
+        <file>wufoo.php</file>
+
+        <folder>databases</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <files folder="administrator/components/com_wufoo">
+            <file>dispatcher.php</file>
+            <file>wufoo.php</file>
+
+            <folder>databases</folder>
+            <folder>install</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>templates</folder>
+            <folder>views</folder>
+        </files>
+
+        <languages folder="administrator/components/com_wufoo">
+            <language tag="en-GB">language/en-GB/en-GB.com_wufoo.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_wufoo.sys.ini</language>
+            <language tag="fr-FR">language/fr-FR/fr-FR.com_wufoo.ini</language>
+            <language tag="fr-FR">language/fr-FR/fr-FR.com_wufoo.sys.ini</language>
+        </languages>
+
+        <menu>COM_WUFOO</menu>
+    </administration>
+
+    <media folder="media" destination="com_wufoo">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+</extension>
