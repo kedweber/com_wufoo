@@ -17,12 +17,13 @@ class ComWufooControllerForm extends ComDefaultControllerDefault
 	{
 		$data = $this->getModel()->getItem();
 
-		$row = $this->getService('com://admin/wufoo.model.api.entries')->id($data->hash)->getItem();
-		$row->setData($context->data);
+		$row = $this->getService('com://admin/wufoo.database.row.api_entry');
+		$row->setData($context->data->toArray());
+		$row->hash = $data->hash;
 
 		if($row->save() === false)
 		{
-			$error = $data->getStatusMessage();
+			$error = $row->getStatusMessage();
 			$context->setError(new KControllerException(
 				$error ? $error : 'Add Action Failed', KHttpResponse::INTERNAL_SERVER_ERROR
 			));
