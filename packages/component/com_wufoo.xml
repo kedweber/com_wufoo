@@ -26,6 +26,7 @@
         <file>aliases.php</file>
         <file>wufoo.php</file>
 
+        <folder>controllers</folder>
         <folder>databases</folder>
         <folder>views</folder>
     </files>
