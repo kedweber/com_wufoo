@@ -33,12 +33,22 @@ class ComWufooModelApiFields extends ComWufooModelApiDefault
 	{
 		$state = $this->_state;
 
-		$data = $this->curl(
-			array(
-				'url' => 'https://ctaint.wufoo.com/api/v3/forms/'. $state->id .'/fields.json',
-				'type' => 'fields'
-			)
-		);
+		$identifier = clone $this->getIdentifier();
+		$cache  = JFactory::getCache('com_wufoo', '');
+		$key =  md5($identifier .':'. $state->id);
+
+		if($data = $cache->get($key)) {
+			$data = unserialize($data);
+		} else {
+			$data = $this->curl(
+				array(
+					'url' => 'https://ctaint.wufoo.com/api/v3/forms/'. $state->id .'/fields.json',
+					'type' => 'fields'
+				)
+			);
+
+			$cache->store(serialize($data), $key);
+		}
 
 		$this->_item = $this->getRow()->setData($data);
 

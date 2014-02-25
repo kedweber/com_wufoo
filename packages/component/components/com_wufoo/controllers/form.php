@@ -13,6 +13,10 @@ defined('KOOWA') or die('Protected resource');
 
 class ComWufooControllerForm extends ComDefaultControllerDefault
 {
+	/**
+	 * @param KCommandContext $context
+	 * @return object
+	 */
 	protected function _actionSubmit(KCommandContext $context)
 	{
 		$data = $this->getModel()->getItem();
