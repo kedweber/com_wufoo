@@ -54,7 +54,7 @@
         <menu>COM_WUFOO</menu>
     </administration>
 
-    <media folder="media" destination="com_wufoo">
+    <media folder="media/com_wufoo" destination="com_wufoo">
         <folder>css</folder>
         <folder>images</folder>
         <folder>js</folder>

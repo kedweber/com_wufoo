@@ -42,12 +42,16 @@ defined('KOOWA') or die('Protected resource'); ?>
 
 <div id="loader">
 	<h1><?= $form->title; ?></h1>
-	<form action="" method="POST" class="ajaxified" id="<?= $form->slug; ?>">
-		<? foreach($form->fields as $field) : ?>
-			<?= @template('com://site/wufoo.view.types.'.$field['type'], array('form' => $form, 'field' => $field)); ?>
-		<? endforeach; ?>
-		<input type="hidden" name="action" value="submit" />
-		<button type="submit" class="btn btn-primary">Subscribe to the fin4ag newsletter</button>
-	</form>
-	<div id="messages"></div>
+<!--	<div class="row">-->
+<!--		<div class="col-sm-6">-->
+			<form action="" method="POST" class="ajaxified" id="<?= $form->slug; ?>">
+				<? foreach($form->fields as $field) : ?>
+					<?= @template('com://site/wufoo.view.types.'.$field['type'], array('form' => $form, 'field' => $field)); ?>
+				<? endforeach; ?>
+				<input type="hidden" name="action" value="submit" />
+				<button type="submit" class="btn btn-primary submit"><?= $form->button_submit; ?></button>
+			</form>
+			<div id="messages"></div>
+<!--		</div>-->
+<!--	</div>-->
 </div>

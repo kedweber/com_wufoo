@@ -7,10 +7,12 @@ class ComWufooDatabaseTableForms extends KDatabaseTableDefault
 		$config->append(array(
 			'behaviors' => array(
 				'identifiable',
-				'sluggable',
-				'creatable',
+				'com://admin/moyo.database.behavior.sluggable',
+				'orderable',
+				'com://admin/moyo.database.behavior.creatable',
 				'modifiable',
-				'lockable'
+				'lockable',
+				'com://admin/translations.database.behavior.translatable',
 			)
 		));
 

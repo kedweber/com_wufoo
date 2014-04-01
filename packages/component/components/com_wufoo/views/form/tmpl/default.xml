@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="SINGLE_FORM">
+		<message>
+			DISPLAY_A_SINGLE_FORM
+		</message>
+	</layout>
+	<fields name="request" addfieldpath="components/com_wufoo/forms/fields">
+		<fieldset name="request">
+			<field
+					name="id"
+					type="form"
+					label="FORM"
+					description="SELECT_THE_FORM_TO_DISPLAY"
+					/>
+		</fieldset>
+	</fields>
+</metadata>

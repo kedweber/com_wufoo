@@ -17,7 +17,7 @@ class ComWufooTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 	 * @param array $config
 	 * @return string
 	 */
-	public function forms($config = array())
+	public function wufoo_forms($config = array())
 	{
 		$config = new KConfig($config);
 		$config->append(array(
@@ -25,6 +25,20 @@ class ComWufooTemplateHelperListbox extends ComDefaultTemplateHelperListbox
 			'value'    => 'hash',
 			'text'     => 'name',
 			'name'     => 'hash',
+			'deselect' => true,
+		));
+
+		return parent::_listbox($config);
+	}
+
+	public function forms($config = array())
+	{
+		$config = new KConfig($config);
+		$config->append(array(
+			'model'    => 'forms',
+			'value'    => 'id',
+			'text'     => 'title',
+			'name'     => 'wufoo_form_id',
 			'deselect' => true,
 		));
 
