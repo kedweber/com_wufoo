@@ -14,6 +14,28 @@ defined('KOOWA') or die('Protected resource');
 class ComWufooControllerForm extends ComDefaultControllerDefault
 {
 	/**
+	 * @param KConfig $config
+	 */
+	protected function _initialize(KConfig $config)
+	{
+		$cacheable = $this->getBehavior('com://site/moyo.controller.behavior.cacheable',
+			array(
+				'modules' => array(
+					'banner'
+				)
+			)
+		);
+
+		$config->append(array(
+			'behaviors' => array(
+				$cacheable,
+			)
+		));
+
+		parent::_initialize($config);
+	}
+
+	/**
 	 * @param KCommandContext $context
 	 * @return object
 	 */
