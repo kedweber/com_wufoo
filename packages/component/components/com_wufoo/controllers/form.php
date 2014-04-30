@@ -22,7 +22,8 @@ class ComWufooControllerForm extends ComDefaultControllerDefault
 			array(
 				'modules' => array(
 					'banner'
-				)
+				),
+				'force_cache' => true,
 			)
 		);
 

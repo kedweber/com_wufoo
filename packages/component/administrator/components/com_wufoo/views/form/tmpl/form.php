@@ -9,10 +9,10 @@
 <script src="media://lib_koowa/js/koowa.js" />
 -->
 
-<form action="" method="post" class="-koowa-form" data-toolbar=".toolbar-list">
+<form action="" method="post" class="-koowa-form form-horizontal" data-toolbar=".toolbar-list">
 	<div class="row-fluid">
 		<div class="span6">
-			<fieldset class="form-horizontal">
+			<fieldset>
 				<legend><?= @text('DETAILS'); ?></legend>
 				<div class="control-group">
 					<label class="control-label" for="name"><?= @text('TITLE'); ?></label>
@@ -66,6 +66,10 @@
 						?>
 					</div>
 				</div>
+			</fieldset>
+			<fieldset>
+				<legend><?= @text('FIELDS'); ?></legend>
+				<?= @service('com://admin/cck.controller.element')->cck_fieldset_id($form->cck_fieldset_id)->row($form->id)->table('wufoo_forms')->getView()->assign('row', $form)->layout('list')->display(); ?>
 			</fieldset>
 		</div>
 	</div>

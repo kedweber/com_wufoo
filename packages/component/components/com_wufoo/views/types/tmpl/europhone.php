@@ -8,7 +8,7 @@
  * @subpackage  ...
  * @uses        Com_
  */
- 
+
 defined('KOOWA') or die('Protected resource'); ?>
 
 <div class="form-group">

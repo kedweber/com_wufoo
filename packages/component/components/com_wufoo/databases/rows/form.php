@@ -1,12 +1,10 @@
 <?php
 /**
- * Com
+ * ComWufoo
  *
  * @author      Dave Li <dave@moyoweb.nl>
  * @category    Nooku
- * @package     Socialhub
- * @subpackage  ...
- * @uses        Com_
+ * @uses        Com_moyo
  */
  
 defined('KOOWA') or die('Protected resource');
@@ -14,18 +12,15 @@ defined('KOOWA') or die('Protected resource');
 class ComWufooDatabaseRowForm extends KDatabaseRowDefault
 {
 	/**
-	 * @param $data
-	 * @param bool $modified
-	 * @return $this|KDatabaseRowAbstract
+	 * @param $column
+	 * @return string
 	 */
-	public function setData($data, $modified = true)
+	public function __get($column)
 	{
-		parent::setData($data, $modified);
-
-		if($this->hash) {
-			$this->fields = $this->getService('com://admin/wufoo.model.api.fields')->id($this->hash)->getItem()->toArray();
+		if($column == 'form_fields') {
+			return $this->getService('com://admin/wufoo.model.api.fields')->id($this->hash)->getItem()->toArray();
 		}
 
-		return $this;
+		return parent::__get($column);
 	}
 }

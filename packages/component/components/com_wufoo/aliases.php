@@ -14,13 +14,9 @@ class ComWufooAliases extends KObject
     public function setAliases()
     {
         if (!$this->_loaded) {
-			$loader = KService::get('koowa:loader');
-
-//			$loader->loadIdentifier('com://admin/wufoo.database.row.form');
-
             $maps = array(
-                'com://site/wufoo.model.forms'	     			=> 'com://admin/wufoo.model.forms',
-                'com://site/wufoo.model.entries'	     			=> 'com://admin/wufoo.model.entries',
+                'com://site/wufoo.model.forms'		=> 'com://admin/wufoo.model.forms',
+                'com://site/wufoo.model.entries'	=> 'com://admin/wufoo.model.entries',
             );
 
             foreach ($maps as $alias => $identifier) {
