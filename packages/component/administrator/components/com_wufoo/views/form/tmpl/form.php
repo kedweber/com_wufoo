@@ -67,10 +67,12 @@
 					</div>
 				</div>
 			</fieldset>
+			<? if($form->cck_fieldset_id) : ?>
 			<fieldset>
 				<legend><?= @text('FIELDS'); ?></legend>
 				<?= @service('com://admin/cck.controller.element')->cck_fieldset_id($form->cck_fieldset_id)->row($form->id)->table('wufoo_forms')->getView()->assign('row', $form)->layout('list')->display(); ?>
 			</fieldset>
+			<? endif; ?>
 		</div>
 	</div>
 </form>
