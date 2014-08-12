@@ -1,0 +1,17 @@
+{
+    "name": "cta/wufoo",
+    "type": "joomlatools-installer",
+    "description": "Translations",
+    "keywords": ["joomla", "moyo"],
+    "homepage": "https://github.com/cta-int/translations",
+    "authors": [
+        {
+            "name": "Dave Li",
+            "email": "dave@moyoweb.nl",
+            "homepage": "http://www.moyoweb.nl"
+        }
+    ],
+    "require": {
+        "joomlatools/installer": "*"
+    }
+}
