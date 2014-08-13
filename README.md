@@ -30,16 +30,16 @@ section:
 
 ```json
 {
-    "name": "moyo/wufoo",
+    "name": "cta/wufoo",
     "type": "vcs",
-    "url": "https://git.assembla.com/moyo-content.wufoo.git"
+    "url": "https://github.com/cta-int/wufoo.git"
 }
 ```
 
 The require section should contain the following line:
 
 ```json
-    "moyo/wufoo": "1.0.*",
+    "cta/wufoo": "1.0.*",
 ```
 
 Afterward, just run `composer update` from the root of your Joomla project.
