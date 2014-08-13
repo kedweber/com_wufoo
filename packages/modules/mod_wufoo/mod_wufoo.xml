@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>dave@moyoweb.nl</authorEmail>
     <authorUrl>http://moyoweb.nl</authorUrl>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
     <description>Wufoo</description>
     <files>
         <filename module="mod_wufoo">mod_wufoo.php</filename>
