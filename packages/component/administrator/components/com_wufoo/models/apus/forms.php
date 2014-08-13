@@ -45,7 +45,7 @@ class ComWufooModelApiForms extends ComWufooModelApiDefault
 	public function getItem()
 	{
 		$state = $this->_state;
-die('test');
+
 		$data = $this->curl(
 			array(
 				'url' => 'https://ctaint.wufoo.com/api/v3/forms/'. $state->id .'/forms.json',

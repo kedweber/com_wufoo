@@ -6,8 +6,6 @@ class ComWufooDatabaseTableForms extends KDatabaseTableDefault
 	{
 		$relationable = $this->getBehavior('com://admin/taxonomy.database.behavior.relationable');
 
-		$routable = $this->getBehavior('com://admin/routes.database.behavior.routable');
-
 		$config->append(array(
 			'behaviors' => array(
 				'com://admin/moyo.database.behavior.sluggable',
@@ -19,7 +17,6 @@ class ComWufooDatabaseTableForms extends KDatabaseTableDefault
 				$relationable,
 				'com://admin/cck.database.behavior.elementable',
 				'com://admin/translations.database.behavior.translatable',
-				$routable,
 			)
 		));
 
