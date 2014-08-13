@@ -1,9 +1,9 @@
 {
     "name": "cta/wufoo",
     "type": "joomlatools-installer",
-    "description": "Translations",
-    "keywords": ["joomla", "moyo"],
-    "homepage": "https://github.com/cta-int/translations",
+    "description": "Wufoo Package",
+    "keywords": ["joomla", "wufoo"],
+    "homepage": "https://github.com/cta-int/wufoo.git",
     "authors": [
         {
             "name": "Dave Li",

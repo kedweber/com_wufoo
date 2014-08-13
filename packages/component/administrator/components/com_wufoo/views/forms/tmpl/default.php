@@ -43,7 +43,7 @@
 		<? if(!count($forms)) : ?>
 			<tr>
 				<td colspan="2" style="text-align: center;">
-					<?= @text('WUFOO_NO_FORMS_FOUND.') ?>
+					<?= @text('NO_ITEMS') ?>
 				</td>
 			</tr>
 		<? endif ?>
