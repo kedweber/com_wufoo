@@ -35,7 +35,8 @@ class ComWufooModelApiFields extends ComWufooModelApiDefault
 
 		$identifier = clone $this->getIdentifier();
 		$cache  = JFactory::getCache('com_wufoo', '');
-		$key =  md5($identifier .':'. $state->id);
+        $cache->setCaching(true);
+        $key =  md5($identifier .':'. $state->id);
 
 		if($data = $cache->get($key)) {
 			$data = unserialize($data);
