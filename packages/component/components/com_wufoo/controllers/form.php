@@ -13,28 +13,6 @@ defined('KOOWA') or die('Protected resource');
 
 class ComWufooControllerForm extends ComDefaultControllerDefault
 {
-	/**
-	 * @param KConfig $config
-	 */
-	protected function _initialize(KConfig $config)
-	{
-		$cacheable = $this->getBehavior('com://site/moyo.controller.behavior.cacheable',
-			array(
-				'modules' => array(
-					'banner'
-				),
-				'force_cache' => true,
-			)
-		);
-
-		$config->append(array(
-			'behaviors' => array(
-				$cacheable,
-			)
-		));
-
-		parent::_initialize($config);
-	}
 
 	/**
 	 * @param KCommandContext $context
@@ -44,10 +22,11 @@ class ComWufooControllerForm extends ComDefaultControllerDefault
 	{
 		$data = $this->getModel()->getItem();
 
-		$row = $this->getService('com://admin/wufoo.database.row.api_entry');
+        $row = $this->getService('com://admin/wufoo.database.row.api_entry');
 		$row->setData($context->data->toArray());
 		$row->hash = $data->hash;
 
+        // Save to send the mail
 		if($row->save() === false)
 		{
 			$error = $row->getStatusMessage();
