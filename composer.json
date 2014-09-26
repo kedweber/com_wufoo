@@ -3,7 +3,7 @@
     "type": "joomlatools-installer",
     "description": "Wufoo Package",
     "keywords": ["joomla", "wufoo"],
-    "homepage": "https://github.com/cta-int/wufoo.git",
+    "homepage": "https://github.com/cta-int/wufoo",
     "authors": [
         {
             "name": "Dave Li",

@@ -10,7 +10,6 @@ class ComWufooDatabaseTableForms extends KDatabaseTableDefault
 			'behaviors' => array(
 				'com://admin/moyo.database.behavior.sluggable',
 				'identifiable',
-				'orderable',
 				'modifiable',
 				'lockable',
 				'com://admin/moyo.database.behavior.creatable',

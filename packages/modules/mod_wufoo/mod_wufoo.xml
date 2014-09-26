@@ -10,10 +10,11 @@
     <version>1.0.4</version>
     <description>Wufoo</description>
     <files>
-        <filename module="mod_wufoo">mod_wufoo.php</filename>
+        <file module="mod_wufoo">mod_wufoo.php</file>
+        <file>html.php</file>
+        <file>mod_wufoo.php</file>
+        
         <folder>tmpl</folder>
-        <filename>html.php</filename>
-        <filename>mod_wufoo.php</filename>
     </files>
 
     <config>
