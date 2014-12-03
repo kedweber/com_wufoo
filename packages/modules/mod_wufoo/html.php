@@ -17,13 +17,9 @@ class ModWufooHtml extends ModDefaultHtml
     {
         $params = $this->module->params;
 
-        $this->assign('params', $params);
+        $form = $this->getService('com://admin/wufoo.model.forms')->id($params->form)->getItem();
 
-	    if($params->copyright_menu != '') {
-		    $menu = JFactory::getApplication()->getMenu()->getItems(array('menutype'), array($params->copyright_menu));
-
-		    $this->assign('copyright_menu', $menu);
-	    }
+        $this->assign('form', $form);
 
         return parent::display();
     }

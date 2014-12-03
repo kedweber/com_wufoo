@@ -20,13 +20,13 @@ done filling in the form.
 * Moyo Components
     * com_cck
     * com_moyo
+    * com_eventbrite
 
 ## Installation
 
 ### Composer
 
-Installation is done through composer. In your `composer.json` file, you should add the following lines to the repositories
-section:
+Installation is done through composer. In your `composer.json` file, you should add the following lines to the repositories section:
 
 ```json
 {
@@ -42,7 +42,7 @@ The require section should contain the following line:
     "cta/wufoo": "1.0.*",
 ```
 
-Afterward, just run `composer update` from the root of your Joomla project.
+Afterward, just run `composer update` from the root of your Joomla project. Please make sure that the Moyo components described above are to be added as well.
 
 ### jsymlinker
 
