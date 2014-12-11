@@ -28,6 +28,8 @@
 
         <folder>controllers</folder>
         <folder>databases</folder>
+        <folder>forms</folder>
+        <folder>language</folder>
         <folder>views</folder>
     </files>
 
