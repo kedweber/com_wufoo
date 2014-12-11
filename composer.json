@@ -2,7 +2,7 @@
     "name": "cta/wufoo",
     "type": "joomlatools-installer",
     "description": "Wufoo Package",
-    "keywords": ["joomla", "wufoo"],
+    "keywords": ["joomla", "nooku", "wufoo"],
     "homepage": "https://github.com/cta-int/wufoo",
     "authors": [
         {
