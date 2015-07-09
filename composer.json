@@ -1,9 +1,9 @@
 {
-    "name": "cta/wufoo",
+    "name": "moyo/wufoo",
     "type": "joomlatools-installer",
     "description": "Wufoo Package",
     "keywords": ["joomla", "nooku", "wufoo"],
-    "homepage": "https://github.com/cta-int/wufoo",
+    "homepage": "https://github.com/kedweber/com_wufoo",
     "authors": [
         {
             "name": "Dave Li",
